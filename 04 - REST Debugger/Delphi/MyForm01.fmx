@@ -1,0 +1,175 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 820
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 820.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Button1: TButton
+      Action = ActSendGETRequest
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 121.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object Grid1: TGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 820.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowCount = 0
+    Viewport.Width = 816.000000000000000000
+    Viewport.Height = 405.000000000000000000
+  end
+  object ActionList1: TActionList
+    Left = 544
+    Top = 8
+    object ActSendGETRequest: TAction
+      Text = 'Send Request'
+      Visible = False
+      OnExecute = ActSendGETRequestExecute
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 'http://localhost:8080'
+    ContentType = 'application/json'
+    Params = <>
+    SynchronizedEvents = False
+    Left = 544
+    Top = 136
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Params = <
+      item
+        Kind = pkREQUESTBODY
+        Name = 'bodyF7CCF69DCF884E7A847419065113613C'
+        Value = 
+          '{'#13#10'  "CUSTOMER": "Bank of Manchster",'#13#10'  "PHONE_NO": "+446121199' +
+          '88"'#13#10'}'
+        ContentTypeStr = 'application/json'
+      end>
+    Resource = 'test/customers/'
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 544
+    Top = 192
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    Left = 544
+    Top = 248
+  end
+  object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    Response = RESTResponse1
+    TypesMode = JSONOnly
+    Left = 544
+    Top = 304
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'CUST_NO'
+        DataType = ftFloat
+      end
+      item
+        Name = 'CUSTOMER'
+        DataType = ftWideString
+        Size = 16
+      end
+      item
+        Name = 'CONTACT_FIRST'
+        DataType = ftWideString
+        Size = 7
+      end
+      item
+        Name = 'CONTACT_LAST'
+        DataType = ftWideString
+        Size = 6
+      end
+      item
+        Name = 'PHONE_NO'
+        DataType = ftWideString
+        Size = 14
+      end
+      item
+        Name = 'ADDRESS_LINE1'
+        DataType = ftWideString
+        Size = 27
+      end
+      item
+        Name = 'CITY'
+        DataType = ftWideString
+        Size = 9
+      end
+      item
+        Name = 'STATE_PROVINCE'
+        DataType = ftWideString
+        Size = 2
+      end
+      item
+        Name = 'COUNTRY'
+        DataType = ftWideString
+        Size = 3
+      end
+      item
+        Name = 'POSTAL_CODE'
+        DataType = ftWideString
+        Size = 5
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 544
+    Top = 360
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 368
+    Top = 360
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 260
+    Top = 357
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      Columns = <>
+    end
+  end
+end

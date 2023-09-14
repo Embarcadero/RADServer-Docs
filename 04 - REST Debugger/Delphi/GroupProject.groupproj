@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DF6473DF-F074-4DD1-AFB9-B31B99514E04}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ComponentsFromRESTDebugger.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\03 - Creating your first CRUD Application\Delphi\MyFirstCRUDDelphiRADServerPackage.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ComponentsFromRESTDebugger">
+        <MSBuild Projects="ComponentsFromRESTDebugger.dproj"/>
+    </Target>
+    <Target Name="ComponentsFromRESTDebugger:Clean">
+        <MSBuild Projects="ComponentsFromRESTDebugger.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ComponentsFromRESTDebugger:Make">
+        <MSBuild Projects="ComponentsFromRESTDebugger.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MyFirstCRUDDelphiRADServerPackage">
+        <MSBuild Projects="..\..\03 - Creating your first CRUD Application\Delphi\MyFirstCRUDDelphiRADServerPackage.dproj"/>
+    </Target>
+    <Target Name="MyFirstCRUDDelphiRADServerPackage:Clean">
+        <MSBuild Projects="..\..\03 - Creating your first CRUD Application\Delphi\MyFirstCRUDDelphiRADServerPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MyFirstCRUDDelphiRADServerPackage:Make">
+        <MSBuild Projects="..\..\03 - Creating your first CRUD Application\Delphi\MyFirstCRUDDelphiRADServerPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ComponentsFromRESTDebugger;MyFirstCRUDDelphiRADServerPackage"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ComponentsFromRESTDebugger:Clean;MyFirstCRUDDelphiRADServerPackage:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ComponentsFromRESTDebugger:Make;MyFirstCRUDDelphiRADServerPackage:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
