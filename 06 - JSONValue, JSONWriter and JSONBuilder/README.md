@@ -1,6 +1,6 @@
 ## Chapter 6: JSONValue, JSONWriter and JSON builder
 
-Don't forget to [watch the video](https://youtube.com/) of this chapter. 
+Don't forget to [watch the video](https://youtu.be/DQukKQg0V2M) of this chapter. 
 
 RAD Server provides support for handling JSON data that can be consumed by different programming languages and tools. Creating a JSON string, transmitting the string as a response, and having the client application code process the return is okay for smaller amounts of data. Imagine how large a JSON array response would be for an entire database or a complex data structure? RAD Studio provides three main frameworks for working with JSON data. This chapter covers a few of the many ways RAD Server applications can return JSON to a calling application.
 

@@ -1,6 +1,6 @@
 ## Chapter 8: Accessing the built-in analytics
 
-Don't forget to [watch the video](https://youtube.com/) of this chapter. 
+Don't forget to [watch the video](https://youtu.be/uDntdmokIyE) of this chapter. 
 
 The RAD Server Console is a service that provides a pre-configured web application which displays multiple data as well as analytics from the RAD Server Engine. It allows you to have a more in-depth view of the activity on your RAD Server instances and make decisions based on real data. Analyze user, API, and services activity to gain insight into how your application is being utilized.
 

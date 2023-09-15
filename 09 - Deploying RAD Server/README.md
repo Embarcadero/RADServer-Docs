@@ -1,8 +1,8 @@
 ## Chapter 9: Deploying RAD Server
 
-- Deployment on Windows: [watch the video](https://youtube.com/). 
-- Deployment on Linux: [watch the video](https://youtube.com/). 
-- Deployment on Docker: [watch the video](https://youtube.com/). 
+- Deployment on Windows: [watch the video](https://youtu.be/QtdV4m_0Ubk). 
+- Deployment on Linux: [watch the video](https://youtu.be/ZzPfvOgS-Zk). 
+- Deployment on Docker: [watch the video](https://youtu.be/YFem4Tmdxag). 
 
 This chapter covers the multiple platforms where you can deploy RAD Server in production: Windows, Linux and Docker. If you are interested in RAD Server Lite, jump to the next chapter.
 

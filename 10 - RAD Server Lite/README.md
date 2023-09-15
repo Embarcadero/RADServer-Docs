@@ -1,6 +1,6 @@
 ## Chapter 10: RAD Server Lite
 
-Don't forget to [watch the video](https://youtube.com/) of this chapter. 
+Don't forget to [watch the video](https://youtu.be/NMEC1Urcdv4) of this chapter. 
 
 **RAD Server Lite** (RSLite) offers a simpler deployment model for test servers and scenarios not requiring a lot of throughputs, and it offers this by using the InterBase embedded database engine, **IBToGo**, instead of the full-blown server and combines it with a simplified licensing model.
 

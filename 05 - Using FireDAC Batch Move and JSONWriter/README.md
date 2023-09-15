@@ -1,6 +1,6 @@
 ## Chapter 5: Using FireDAC Batch Move and JSONWriter
 
-Don't forget to [watch the video](https://youtube.com/) of this chapter. 
+Don't forget to [watch the video](https://youtu.be/Rs3QpUGjrW4) of this chapter. 
 
 Depending on the requirements for your projects or what technology you are more familiar with, RAD Studio allows you to use even more tools to create your REST API. 
 

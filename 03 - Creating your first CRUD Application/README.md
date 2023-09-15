@@ -1,6 +1,6 @@
 ## Chapter 3: Creating your first CRUD Application
 
-Don't forget to [watch the video](https://youtube.com/) of this chapter. 
+Don't forget to [watch the video](https://youtu.be/ud3KFTq7vr8) of this chapter. 
 
 RAD Studio provides multiple ready to use components but one of the most useful ones when it comes to create CRUD APIs is **EMSDataSetResource**. This component allows you to link a FireDAC query to it and expose not only the data but also manipulate it. The component creates automatically all the required endpoints for CRUD and provides extra functionality like pagination, sorting and more. 
 
