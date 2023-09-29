@@ -7,7 +7,7 @@
   <h3 align="center">RAD Server documentation</h3>
 
   <p align="center">
-    <a href="REPLACE WITH URL TO THE NEW DOWNLOAD PAGE - ALSO AT THE BOTTOM LINKS"><strong>Download Documentation</strong></a>
+    <a href="https://lp.embarcadero.com/RADServerGuide"><strong>Download Documentation</strong></a>
     <br />
     <br />
     <a href="https://www.embarcadero.com/products/rad-server">More info</a>
@@ -105,8 +105,8 @@ Repo Link: [https://github.com/embarcadero/radserver-docs](https://github.com/em
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[yt-playlist-url]: https://replace-with-the-new.URL
-[new-docs-url]: https://replace-with-the-new.URL
+[yt-playlist-url]: https://www.youtube.com/playlist?list=PLwUPJvR9mZHj6Ixqd53dREQ-c4CN51RVF
+[new-docs-url]: https://lp.embarcadero.com/RADServerGuide
 [radserver-url]: https://www.embarcadero.com/products/rad-server
 [issues-url]: https://github.com/Embarcadero/RADServer-docs/issues
 [support-url]: https://www.embarcadero.com/support
