@@ -1,4 +1,4 @@
-# Chapter 1: What's RAD Server - Introduction
+## Chapter 1: What's RAD Server - Introduction
 
 Don't forget to [watch the video](https://youtu.be/jWdt-5Z3lrY) of this chapter. 
 
