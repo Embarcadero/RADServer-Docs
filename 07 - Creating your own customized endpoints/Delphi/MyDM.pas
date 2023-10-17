@@ -50,7 +50,6 @@ type
     [ResourceSuffix('Delete', './{PO_NUMBER}')]
     dsrSALES: TEMSDataSetResource;
     dsCUSTOMER: TDataSource;
-    FDManager1: TFDManager;
   private
     // If the query has a masterfield defined, it retuns a StringList of all the fields but the masterfield one
     function ExcludeMasterFieldFromFields(ADataset: TFDQuery): TStringList;

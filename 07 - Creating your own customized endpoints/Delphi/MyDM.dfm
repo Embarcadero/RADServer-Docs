@@ -1,13 +1,12 @@
 object TestResource1: TTestResource1
-  Height = 375
-  Width = 750
-  PixelsPerInch = 120
+  Height = 267
+  Width = 348
   object FDConnection1: TFDConnection
     Params.Strings = (
       'ConnectionDef=EMPLOYEE')
     LoginPrompt = False
-    Left = 38
-    Top = 20
+    Left = 30
+    Top = 16
   end
   object qryCUSTOMER: TFDQuery
     Connection = FDConnection1
@@ -15,8 +14,8 @@ object TestResource1: TTestResource1
       'select * from CUSTOMER'
       '&MacroWhere'
       '{if !SORT}order by !SORT{fi}')
-    Left = 163
-    Top = 20
+    Left = 130
+    Top = 16
     MacroData = <
       item
         Value = Null
@@ -33,8 +32,8 @@ object TestResource1: TTestResource1
     DataSet = qryCUSTOMER
     KeyFields = 'CUST_NO'
     PageSize = 5
-    Left = 163
-    Top = 100
+    Left = 130
+    Top = 80
   end
   object qrySALES: TFDQuery
     MasterSource = dsCUSTOMER
@@ -44,8 +43,8 @@ object TestResource1: TTestResource1
       'select * from SALES'
       'where cust_no = :CUST_NO'
       '{if !SORT}order by !SORT{fi}')
-    Left = 288
-    Top = 20
+    Left = 230
+    Top = 16
     ParamData = <
       item
         Name = 'CUST_NO'
@@ -63,21 +62,12 @@ object TestResource1: TTestResource1
     AllowedActions = [List, Get, Post, Put, Delete]
     DataSet = qrySALES
     KeyFields = 'PO_NUMBER'
-    Left = 288
-    Top = 100
+    Left = 230
+    Top = 80
   end
   object dsCUSTOMER: TDataSource
     DataSet = qryCUSTOMER
-    Left = 160
-    Top = 176
-  end
-  object FDManager1: TFDManager
-    WaitCursor = gcrNone
-    FormatOptions.AssignedValues = [fvMapRules]
-    FormatOptions.OwnMapRules = True
-    FormatOptions.MapRules = <>
-    Active = True
-    Left = 576
-    Top = 368
+    Left = 128
+    Top = 141
   end
 end
