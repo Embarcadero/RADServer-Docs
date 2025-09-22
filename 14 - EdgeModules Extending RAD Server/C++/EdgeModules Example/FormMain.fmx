@@ -1,0 +1,148 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 351
+  ClientWidth = 319
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Size.Width = 319.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 299.000000000000000000
+      Size.Height = 93.000000000000000000
+      Size.PlatformDefault = False
+      Text = 
+        'To register the EdgeModule in the RAD Server, simply click the b' +
+        'utton underneath.'#13#10#13#10'Once the module is registered, modify the v' +
+        'alues of the groupbox and access the "formValues" endpoint. '
+      TabOrder = 0
+    end
+  end
+  object BtnActive: TButton
+    Action = ActivateEdgeModule
+    Align = Client
+    StyledSettings = [Family]
+    ImageIndex = -1
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 299.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claBrown
+    TextSettings.Trimming = None
+  end
+  object GroupBox1: TGroupBox
+    Align = Bottom
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 30.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 199.000000000000000000
+    Size.Width = 299.000000000000000000
+    Size.Height = 142.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Values to Include in the Response'
+    TabOrder = 17
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 36
+      Position.X = 10.000000000000000000
+      Position.Y = 59.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 279.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Type any value to be returned'
+    end
+    object TrackBar1: TTrackBar
+      Align = Top
+      CanParentFocus = True
+      Frequency = 1.000000000000000000
+      Orientation = Horizontal
+      Margins.Top = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 91.000000000000000000
+      Size.Width = 279.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object lblTrackValue: TLabel
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 115.000000000000000000
+      Size.Width = 279.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'lblTrackValue'
+      TabOrder = 38
+    end
+    object CheckBox1: TCheckBox
+      Align = Top
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 279.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'CheckBox'
+    end
+  end
+  object EMSProvider1: TEMSProvider
+    ApiVersion = '2'
+    URLHost = 'localhost'
+    URLPort = 8080
+    Left = 248
+    Top = 160
+  end
+  object EMSEdgeService1: TEMSEdgeService
+    ModuleName = 'MyProcessor'
+    ModuleVersion = '1'
+    Provider = EMSProvider1
+    ListenerProtocol = 'http'
+    ListenerService.Port = 8888
+    ListenerService.Host = 'localhost'
+    OnRegistered = EMSEdgeService1Registered
+    OnUnregistered = EMSEdgeService1Unregistered
+    Left = 248
+    Top = 216
+  end
+  object ActionList1: TActionList
+    Left = 248
+    Top = 104
+    object ActivateEdgeModule: TAction
+      Text = 'ActivateEdgeModule'
+      OnExecute = ActivateEdgeModuleExecute
+      OnUpdate = ActivateEdgeModuleUpdate
+    end
+  end
+end

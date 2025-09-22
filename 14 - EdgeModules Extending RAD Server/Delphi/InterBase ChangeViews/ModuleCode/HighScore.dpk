@@ -1,0 +1,47 @@
+package HighScore;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  emsserverapi,
+  dbrtl,
+  emsserverresource,
+  FireDACCommonDriver,
+  FireDACCommon,
+  FireDAC,
+  FireDACIBDriver;
+
+contains
+  HighScores.API in 'HighScores.API.pas' {dataHighscoresResource: TDataModule},
+  ChangeView.DataConnection in 'ChangeView.DataConnection.pas' {ChangeViewConnection: TDataModule},
+  ChangeView.Cache in 'ChangeView.Cache.pas' {ChangeViewCachce: TDataModule},
+  HighScores.Params in 'HighScores.Params.pas';
+
+end.

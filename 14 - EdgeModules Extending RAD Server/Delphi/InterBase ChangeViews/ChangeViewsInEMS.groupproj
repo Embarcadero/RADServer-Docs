@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FE7D3E9E-E4DA-4092-9D6E-4CC5FA4418C0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Client\ChangeViewsEMSThingPoint.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Server\RADServerDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ModuleCode\HighScore.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ChangeViewsEMSThingPoint">
+        <MSBuild Projects="Client\ChangeViewsEMSThingPoint.dproj"/>
+    </Target>
+    <Target Name="ChangeViewsEMSThingPoint:Clean">
+        <MSBuild Projects="Client\ChangeViewsEMSThingPoint.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ChangeViewsEMSThingPoint:Make">
+        <MSBuild Projects="Client\ChangeViewsEMSThingPoint.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RADServerDemo">
+        <MSBuild Projects="Server\RADServerDemo.dproj"/>
+    </Target>
+    <Target Name="RADServerDemo:Clean">
+        <MSBuild Projects="Server\RADServerDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RADServerDemo:Make">
+        <MSBuild Projects="Server\RADServerDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HighScore">
+        <MSBuild Projects="ModuleCode\HighScore.dproj"/>
+    </Target>
+    <Target Name="HighScore:Clean">
+        <MSBuild Projects="ModuleCode\HighScore.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HighScore:Make">
+        <MSBuild Projects="ModuleCode\HighScore.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ChangeViewsEMSThingPoint;RADServerDemo;HighScore"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ChangeViewsEMSThingPoint:Clean;RADServerDemo:Clean;HighScore:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ChangeViewsEMSThingPoint:Make;RADServerDemo:Make;HighScore:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

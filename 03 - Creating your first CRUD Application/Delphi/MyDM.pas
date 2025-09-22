@@ -39,9 +39,17 @@ type
     FDConnection1: TFDConnection;
     qryCUSTOMER: TFDQuery;
     [ResourceSuffix('customers')]
+    [ResourceSuffix('Get', './{CUST_NO}')]
+    [ResourceSuffix('Post', './')]
+    [ResourceSuffix('Put', './{CUST_NO}')]
+    [ResourceSuffix('Delete', './{CUST_NO}')]
     dsrCUSTOMER: TEMSDataSetResource;
     qrySALES: TFDQuery;
     [ResourceSuffix('sales')]
+    [ResourceSuffix('Get', './{PO_NUMBER}')]
+    [ResourceSuffix('Post', './')]
+    [ResourceSuffix('Put', './{PO_NUMBER}')]
+    [ResourceSuffix('Delete', './{PO_NUMBER}')]
     dsrSALES: TEMSDataSetResource;
 
   published
