@@ -81,4 +81,5 @@ OSXARM64/
 OSX64/
 Win32/
 Win64/
+Win64x/
 __astcache/
