@@ -257,7 +257,7 @@ begin
       MetaObj.AddPair('duration_ms', TJSONNumber.Create(Duration));
       MetaObj.AddPair('user_id', FCurrentUserID);
       MetaObj.AddPair('method', ARequest.MethodString);
-      MetaObj.AddPair('path', ARequest.BasePath);
+      MetaObj.AddPair('resource', ARequest.Resource);
 
       ResponseObj.AddPair('meta', MetaObj);
 

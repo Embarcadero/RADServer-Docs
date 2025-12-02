@@ -171,17 +171,13 @@ var
 begin
   // Extract message from JSON body (validation already done in BeforeRequest)
   RequestBody := ARequest.Body.GetObject;
-  try
-    ReqMessage := RequestBody.GetValue<string>('message', '');
+  ReqMessage := RequestBody.GetValue<string>('message', '');
 
-    ResponseObj := TJSONObject.Create;
-    ResponseObj.AddPair('echo', ReqMessage);
+  ResponseObj := TJSONObject.Create;
+  ResponseObj.AddPair('echo', ReqMessage);
 
-    AResponse.StatusCode := 201; // Created
-    AResponse.Body.SetValue(ResponseObj, False);
-  finally
-//    RequestBody.Free;
-  end;
+  AResponse.StatusCode := 201; // Created
+  AResponse.Body.SetValue(ResponseObj, False);
 end;
 
 

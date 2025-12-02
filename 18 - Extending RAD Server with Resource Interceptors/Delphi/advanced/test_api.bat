@@ -81,8 +81,4 @@ echo ================================================
 echo            All tests completed!
 echo ================================================
 echo.
-echo Note: You can also test these endpoints in your browser:
-echo   - GET: http://localhost:8080/demo/hello?metadata=false
-echo   - GET: http://localhost:8080/demo/hello?metadata=true
-echo.
 pause
