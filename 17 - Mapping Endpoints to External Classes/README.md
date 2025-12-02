@@ -1,5 +1,7 @@
 ## Chapter 17: Mapping Endpoints to External Classes
 
+Don't forget to [watch the video](https://www.youtube.com/watch?v=mVf8OpBN2ng) of this chapter. 
+
 This feature allows RAD Server custom resources to delegate request processing to resource module fields that implement the `IEMSEndpointPublisher` interface. With this capability, you can organize your API endpoints into logical groups using custom publisher classes.
 
 The demo showcases how to create and configure custom endpoint publishers in RAD Server, demonstrating resource naming conventions and the attribute priority system for endpoint configuration.

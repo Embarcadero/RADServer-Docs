@@ -1,5 +1,7 @@
 # Chapter 14: EdgeModules - Extending RAD Server
 
+Don't forget to [watch the video](https://youtu.be/R_6sEsLeSRI) of this chapter. 
+
 This section contains two demos:
 
 ## EdgeModules Example

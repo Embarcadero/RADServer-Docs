@@ -1,5 +1,7 @@
 ## Chapter 12 - Documenting and testing your endpoints using OpenAPI
 
+Don't forget to [watch the video](https://youtu.be/XCTyX3ued_0) of this chapter. 
+
 This sample is an EMS package that contains a new resource with API documentation that can be accessed via HTTP. It displays the server responses in YAML and JSON formats.This sample uses an EMS package to extend the EMS Server to connect to Interbase (employee.gdb) using FireDAC components.
 
 ### Notes about this sample
